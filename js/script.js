@@ -60,25 +60,13 @@ for ( let i = 0; i < team.length; i++) {
     let teamMember = team[i];
     
     for ( let key in team[i] ) {
-        
-        let elCard = arrayCardsDom[i];
-        // console.log(elCard);
 
-        elCard.innerHTML += ` ${key}: ${teamMember[key]}`;
+        console.log(teamMember[key])
+        let elCard = arrayCardsDom[i];
+
+        // MILESTONE 2:
+        // Stampare le stesse informazioni su DOM sottoforma di stringhe 
+        elCard.innerHTML += `${key} is ${teamMember[key]} - `;
 
     }
 }
-
-
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe 
-/*
-
-
-for ( let i = 0; i < arrayCardsDom.length; i++) {
-    let elCard = arrayCardsDom[i];
-    console.log(elCard);
-
-    elCard.innerHTML = 'ciao';
-
-} */
