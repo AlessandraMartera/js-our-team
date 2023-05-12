@@ -12,6 +12,11 @@
 // Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
+// MILESTONE 0:
+// Creare l’array di oggetti con le informazioni fornite.
+const arrayCardsDom = document.querySelectorAll('.card');
+console.log(arrayCardsDom);
+
 const team = [
     {
         'nome': "Wayne Barnett",
@@ -45,32 +50,35 @@ const team = [
     }
 ];
 
-console.log(team.length);
+
+
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
 console.log(team);
 for ( let i = 0; i < team.length; i++) {
     let teamMember = team[i];
     
     for ( let key in team[i] ) {
-        console.log(key, teamMember[key]);
+        
+        let elCard = arrayCardsDom[i];
+        // console.log(elCard);
+
+        elCard.innerHTML += ` ${key}: ${teamMember[key]}`;
+
     }
 }
 
-/*
-const ciccio = {
-    'nome': "Wayne Barnett",
-    'ruolo': "Founder & CEO",
-    'img': "wayne-barnett-founder-ceo.jpg"
-}
 
-for ( let key in ciccio ) {
-    console.log(ciccio[key]);
-}
-*/
-// MILESTONE 0:
-// Creare l’array di oggetti con le informazioni fornite.
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 // MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
+// Stampare le stesse informazioni su DOM sottoforma di stringhe 
+/*
 
+
+for ( let i = 0; i < arrayCardsDom.length; i++) {
+    let elCard = arrayCardsDom[i];
+    console.log(elCard);
+
+    elCard.innerHTML = 'ciao';
+
+} */
