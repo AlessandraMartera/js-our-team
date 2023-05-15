@@ -50,23 +50,29 @@ const team = [
     }
 ];
 
-
-
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-
 console.log(team);
 for ( let i = 0; i < team.length; i++) {
     let teamMember = team[i];
-    
-    for ( let key in team[i] ) {
+    let elCard = arrayCardsDom[i];
 
-        console.log(teamMember[key])
-        let elCard = arrayCardsDom[i];
+    console.log(teamMember.img);
+    console.log(teamMember.nome);
+    console.log(teamMember.ruolo);
+
+    elCard.innerHTML += `<img src="img/${teamMember.img}" alt="foto membro del team">
+                        <h3>${teamMember.nome}</h3>
+                        <div>${teamMember.ruolo}</div>`;
+    /*
+    for ( let key in teamMember ) {
+
+        console.log(teamMember[key]);
 
         // MILESTONE 2:
         // Stampare le stesse informazioni su DOM sottoforma di stringhe 
+        let elCard = arrayCardsDom[i];
         elCard.innerHTML += `${key} is ${teamMember[key]} - `;
 
-    }
+    }*/
 }
